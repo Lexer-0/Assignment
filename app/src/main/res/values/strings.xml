@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Assignment</string>
+    <string name="application_name">LEXER</string>
+    <string name="email">Email</string>
+    <string name="Password">Password</string>
+    <string name="signUp">Sign Up</string>
+    <string name="signIn">Sign In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>

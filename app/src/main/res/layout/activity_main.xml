@@ -6,13 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ></ImageView>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/Logo"
+        android:text="@string/application_name"
+        style="@style/AppTheme.H5"
+        android:id="@+id/appname"
 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+
+        ></TextView>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        style="@style/AppTheme.H5"
+        android:backgroundTint="@color/colorPrimary"
+        android:hint="@string/email"
+    android:padding="5dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/appname" />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/password"
+    app:layout_constraintTop_toBottomOf="@id/email"
+    android:layout_marginTop="15dp"
+    style="@style/AppTheme.H5"
+    android:backgroundTint="@color/colorPrimary"
+    android:hint="@string/Password"
+    android:padding="5dp">
+
+</EditText>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/AppTheme.H6"
+        android:backgroundTint="@color/cardview_light_background"
+        android:text="@string/signIn"
+        android:textColor="#212121"
+        />
+
+<com.google.android.material.button.MaterialButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/signUp"
+    android:text="@string/signUp"
+    style="@style/Widget.MaterialComponents.Button.TextButton"
+    android:textColor="#212121"
+    android:backgroundTint="@color/cardview_light_background"
+    app:layout_constraintTop_toTopOf="parent"
+
+
+    ></com.google.android.material.button.MaterialButton>
 </androidx.constraintlayout.widget.ConstraintLayout>
